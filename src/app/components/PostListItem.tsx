@@ -1,6 +1,6 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { FontAwesome, Feather } from '@expo/vector-icons'; // Expo icons
+import { FontAwesome, Feather, MaterialCommunityIcons } from '@expo/vector-icons'; // Expo icons
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime'; // Import relativeTime plugin
 import { Post } from '@/types';
@@ -51,9 +51,18 @@ export default function PostListItem({ post }: PostListItemProps) {
 
         {/* Share Button */}
         <TouchableOpacity className="flex-row items-center">
-          <Feather name="share" size={20} color="white" />
+          <FontAwesome name="retweet" size={24} color="white" />      
         </TouchableOpacity>
+
+
+         {/* message Button */}
+        <TouchableOpacity className="flex-row items-center">
+          <FontAwesome name="send" size={24} color="white" />      
+        </TouchableOpacity>
+
       </View>
+
+      
     </View>
   );
 }
